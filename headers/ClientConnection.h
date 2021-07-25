@@ -22,7 +22,6 @@ private:
   unsigned short m_port_send;
   sf::Packet m_packet;
   std::string m_ip;
-  // sf::IpAddress m_ip;
   int m_selected;
   bool m_turn;
 };

@@ -6,8 +6,6 @@
 #include "player.hpp"
 
 player p1;
-// player p2(100,220,50,330,5,5,20000,'x',10000);
-
 void defineWindow(sf::RenderWindow &window);
 
 int main ()
@@ -32,17 +30,12 @@ void defineWindow(sf::RenderWindow &window)
       if (event.type==sf::Event::Closed)
         window.close();
     }
-
-    // Ciscenje sadrzaja prozora
     window.clear(sf::Color::White);
 
     p1.sendMessage();
-    // drawCircle(window);
     p1.drawCircle(window);
 
     p1.receiveMessage();
-
-    // Ponovno iscrtavanje sadrzaja prozora
     window.display();
   }
 }

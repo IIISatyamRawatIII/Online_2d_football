@@ -3,7 +3,6 @@
 Game::Game()
 	:m_gameWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), TITLE)
 {
-	// Ucitavanje ovih aseta prebaciti mozda u funkciju
 	m_gameWindow.setFramerateLimit(60);
 	m_textures.load("ball", "../assets/images/ball.png");
 	m_textures.load("serbia", "../assets/images/serbia.png");
@@ -49,7 +48,7 @@ void Game::proccessEvents(){
 		}
 		if (event.type == sf::Event::KeyPressed)
 			m_currState->keyboard(event.key.code);
-		if (event.type == sf::Event::MouseButtonPressed || 
+		if (event.type == sf::Event::MouseButtonPressed ||
 			event.type == sf::Event::MouseButtonReleased)
 			m_currState->mouse(event.mouseButton);
 	}

@@ -31,9 +31,7 @@ int main ()
           if (packet_receive >> nation2)
             port2=port;
             ip2=ip.toString();
-          // socket.unbind();
           send(port1,packet_send1,nation1,port2,packet_send2,nation2,ip,ip1,ip2);
-          // socket.bind(20000);
           clear(&port1,packet_send1,&port2,packet_send2);
         }
       }

@@ -15,7 +15,7 @@ MenuState::MenuState(Game* game)
     m_backText.setPosition(5, 10);
 
     m_ball.setTexture(p_game->textures()->get("ball"));
-    
+
 
     m_options[0].setPosition(50, WINDOW_HEIGHT - 350);
     m_options[1].setPosition(50, m_options[0].getPosition().y + 80);
@@ -74,7 +74,7 @@ void MenuState::keyboard(sf::Keyboard::Key& key) {
             p_game->exit();
         }
     } else if (key == sf::Keyboard::Key::BackSpace) {
-        m_about = false; // kada se klikne dugme backspace, izlazi se iz about
+        m_about = false;
     }
 }
 void MenuState::mouse(sf::Event::MouseButtonEvent& event) {
